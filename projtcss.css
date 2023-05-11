@@ -1,0 +1,143 @@
+:root{
+    --card-height: 300px;
+    --card-width:calc(var(--card-height)/1.5);
+}
+*{
+    box-sizing: border-box;
+}
+.body1{
+    width: 100vw;
+    height:100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background: #191c29;
+}
+.card{
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 250px;
+    margin: 0 50px;
+}
+.cover-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrapper{
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.wrapper::after{
+    content: "";
+    opacity: 0;
+    width: 100px;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+   
+}
+.wrapper::before{
+    top: 0;
+    height: 100%;
+    
+}
+.wrapper::after{
+    bottom: 0;
+    opacity: 1;
+ 
+}
+.wrapper::after{
+    opacity: 1;
+}
+.card:hover .wrapper::after{
+    height: 120px;
+}
+.title{
+    width: 100%;
+    transition: transform 0.5s;
+}
+.card:hover .title{
+    transform: translate3d(0%,-50px, 100px);
+}
+.character{
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+.card:hover .character{
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+  .main-content{
+    font-size: 0.9rem   ;
+    color: #fff;
+    background-color: #1f1f1f;
+    margin-top: 20px;
+    display: flex;
+}
+.left-content,.right-content{
+    margin: 20px; 
+   width: -5cm; 
+   float: right;
+}
+.left-content p{
+    margin-top:12px;
+} 
+
+.c{
+    width: 10cm;
+
+}
+.icons a{
+    background-color:black;
+    color:white;
+    padding:5px;
+    width:30px;
+    margin: 20px;
+    border-radius: 6px;
+}
+.icons a:hover{
+    background-color: white;
+    color:black;
+}
+
+
+.end-text{
+    margin-top: 12px;
+    text-align: center;
+}
+.right-content input{
+    font-size: 15px;
+    width: 7cm;
+    margin-left: 10px;
+    margin-bottom: 9px;
+}
+.btn button{
+    padding:8px;
+    background-color: rgb(50, 158, 29);
+    width:50%;
+    transition: 0.3s;
+   
+}
+
+.btn button:hover{
+    border-radius:12px;
+    animation: ease-in;
+    color:rgb(249, 249, 249);
+    background-color: rgb(23, 99, 60);
+}
+#contact{
+    margin-left: 27.5%;
+}
